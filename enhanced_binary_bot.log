@@ -1,0 +1,161 @@
+2025-03-27 12:33:27,233 - enhanced_binary_bot - INFO - Using API token: 8fRRApGnNy0TY6T
+2025-03-27 12:33:27,234 - enhanced_binary_bot - INFO - Enhanced Binary Options Bot initialized
+2025-03-27 12:33:27,234 - enhanced_binary_bot - INFO - Starting Enhanced Binary Options Trading Bot
+2025-03-27 12:33:27,234 - enhanced_binary_bot - INFO - Available synthetic indices markets:
+2025-03-27 12:33:27,234 - enhanced_binary_bot - INFO - - volatility_indices: R_10, R_25, R_50, R_75, R_100, 1HZ10V, 1HZ25V, 1HZ50V, 1HZ75V, 1HZ100V
+2025-03-27 12:33:27,234 - enhanced_binary_bot - INFO - - crash_boom: CRASH_1000, CRASH_500, CRASH_250, BOOM_1000, BOOM_500, BOOM_250
+2025-03-27 12:33:27,234 - enhanced_binary_bot - INFO - - step_indices: STEP_INDEX
+2025-03-27 12:33:27,234 - enhanced_binary_bot - INFO - Connecting to Deriv API...
+2025-03-27 12:33:27,590 - enhanced_binary_bot - ERROR - WebSocket Error: Handshake status 401 Unauthorized -+-+- {'date': 'Thu, 27 Mar 2025 12:33:27 GMT', 'content-type': 'application/json;charset=UTF-8', 'content-length': '24', 'connection': 'keep-alive', 'upgrade': 'websocket', 'content-language': 'en', 'sec-websocket-accept': 'B10ykCcSCfhy9gH5vMpKLoaMUN0=', 'cf-cache-status': 'DYNAMIC', 'server': 'cloudflare', 'cf-ray': '926eea91af9dec08-SEA', 'alt-svc': 'h3=":443"; ma=86400'} -+-+- b'{"error":"InvalidAppID"}'
+2025-03-27 12:33:27,591 - websocket - ERROR - Handshake status 401 Unauthorized -+-+- {'date': 'Thu, 27 Mar 2025 12:33:27 GMT', 'content-type': 'application/json;charset=UTF-8', 'content-length': '24', 'connection': 'keep-alive', 'upgrade': 'websocket', 'content-language': 'en', 'sec-websocket-accept': 'B10ykCcSCfhy9gH5vMpKLoaMUN0=', 'cf-cache-status': 'DYNAMIC', 'server': 'cloudflare', 'cf-ray': '926eea91af9dec08-SEA', 'alt-svc': 'h3=":443"; ma=86400'} -+-+- b'{"error":"InvalidAppID"}' - goodbye
+2025-03-27 12:33:27,592 - enhanced_binary_bot - INFO - WebSocket connection closed: None - None
+2025-03-27 12:33:32,592 - enhanced_binary_bot - INFO - Connecting to Deriv API...
+2025-03-27 12:33:32,968 - enhanced_binary_bot - ERROR - WebSocket Error: Handshake status 401 Unauthorized -+-+- {'date': 'Thu, 27 Mar 2025 12:33:32 GMT', 'content-type': 'application/json;charset=UTF-8', 'content-length': '24', 'connection': 'keep-alive', 'content-language': 'en', 'upgrade': 'websocket', 'sec-websocket-accept': '5q99Li+dB12gklt27n9ioOvoN18=', 'cf-cache-status': 'DYNAMIC', 'server': 'cloudflare', 'cf-ray': '926eeab2fd542816-SEA', 'alt-svc': 'h3=":443"; ma=86400'} -+-+- b'{"error":"InvalidAppID"}'
+2025-03-27 12:33:32,969 - websocket - ERROR - Handshake status 401 Unauthorized -+-+- {'date': 'Thu, 27 Mar 2025 12:33:32 GMT', 'content-type': 'application/json;charset=UTF-8', 'content-length': '24', 'connection': 'keep-alive', 'content-language': 'en', 'upgrade': 'websocket', 'sec-websocket-accept': '5q99Li+dB12gklt27n9ioOvoN18=', 'cf-cache-status': 'DYNAMIC', 'server': 'cloudflare', 'cf-ray': '926eeab2fd542816-SEA', 'alt-svc': 'h3=":443"; ma=86400'} -+-+- b'{"error":"InvalidAppID"}' - goodbye
+2025-03-27 12:33:32,969 - enhanced_binary_bot - INFO - WebSocket connection closed: None - None
+2025-03-27 12:54:46,065 - enhanced_binary_bot - INFO - Using API token: 8fRRApGnNy0TY6T
+2025-03-27 12:54:46,067 - enhanced_binary_bot - INFO - Enhanced Binary Options Bot initialized
+2025-03-27 12:54:46,067 - enhanced_binary_bot - INFO - Starting Enhanced Binary Options Trading Bot
+2025-03-27 12:54:46,067 - enhanced_binary_bot - INFO - Available synthetic indices markets:
+2025-03-27 12:54:46,068 - enhanced_binary_bot - INFO - - volatility_indices: R_10, R_25, R_50, R_75, R_100, 1HZ10V, 1HZ25V, 1HZ50V, 1HZ75V, 1HZ100V
+2025-03-27 12:54:46,068 - enhanced_binary_bot - INFO - - crash_boom: CRASH_1000, CRASH_500, CRASH_250, BOOM_1000, BOOM_500, BOOM_250
+2025-03-27 12:54:46,068 - enhanced_binary_bot - INFO - - step_indices: STEP_INDEX
+2025-03-27 12:54:46,068 - enhanced_binary_bot - INFO - Connecting to Deriv API...
+2025-03-27 12:54:46,476 - websocket - INFO - Websocket connected
+2025-03-27 12:54:46,478 - enhanced_binary_bot - INFO - WebSocket connection opened
+2025-03-27 12:54:46,748 - enhanced_binary_bot - INFO - Successfully authorized with Deriv API
+2025-03-27 12:54:46,748 - enhanced_binary_bot - INFO - Starting market data collection phase
+2025-03-27 13:00:45,694 - enhanced_binary_bot - INFO - Using API token: 8fRRApGnNy0TY6T
+2025-03-27 13:00:45,694 - enhanced_binary_bot - INFO - Enhanced Binary Options Bot initialized
+2025-03-27 13:00:45,694 - enhanced_binary_bot - INFO - Starting Enhanced Binary Options Trading Bot
+2025-03-27 13:00:45,694 - enhanced_binary_bot - INFO - Available synthetic indices markets:
+2025-03-27 13:00:45,695 - enhanced_binary_bot - INFO - - volatility_indices: R_10, R_25, R_50, R_75, R_100, 1HZ10V, 1HZ25V, 1HZ50V, 1HZ75V, 1HZ100V
+2025-03-27 13:00:45,695 - enhanced_binary_bot - INFO - - crash_boom: CRASH_1000, CRASH_500, CRASH_250, BOOM_1000, BOOM_500, BOOM_250
+2025-03-27 13:00:45,695 - enhanced_binary_bot - INFO - - step_indices: STEP_INDEX
+2025-03-27 13:00:45,695 - enhanced_binary_bot - INFO - Connecting to Deriv API...
+2025-03-27 13:00:46,081 - websocket - INFO - Websocket connected
+2025-03-27 13:00:46,081 - enhanced_binary_bot - INFO - WebSocket connection opened
+2025-03-27 13:00:46,311 - enhanced_binary_bot - INFO - Successfully authorized with Deriv API
+2025-03-27 13:00:46,311 - enhanced_binary_bot - INFO - Starting market data collection phase
+2025-03-27 13:00:57,915 - enhanced_binary_bot - INFO - Using API token: 8fRRApGnNy0TY6T
+2025-03-27 13:00:57,919 - enhanced_binary_bot - INFO - Enhanced Binary Options Bot initialized
+2025-03-27 13:00:57,920 - enhanced_binary_bot - INFO - Starting Enhanced Binary Options Trading Bot
+2025-03-27 13:00:57,922 - enhanced_binary_bot - INFO - Available synthetic indices markets:
+2025-03-27 13:00:57,922 - enhanced_binary_bot - INFO - - volatility_indices: R_10, R_25, R_50, R_75, R_100, 1HZ10V, 1HZ25V, 1HZ50V, 1HZ75V, 1HZ100V
+2025-03-27 13:00:57,923 - enhanced_binary_bot - INFO - - crash_boom: CRASH_1000, CRASH_500, CRASH_250, BOOM_1000, BOOM_500, BOOM_250
+2025-03-27 13:00:57,924 - enhanced_binary_bot - INFO - - step_indices: STEP_INDEX
+2025-03-27 13:00:57,925 - enhanced_binary_bot - INFO - Connecting to Deriv API...
+2025-03-27 13:00:58,285 - websocket - INFO - Websocket connected
+2025-03-27 13:00:58,286 - enhanced_binary_bot - INFO - WebSocket connection opened
+2025-03-27 13:00:58,508 - enhanced_binary_bot - INFO - Successfully authorized with Deriv API
+2025-03-27 13:00:58,509 - enhanced_binary_bot - INFO - Starting market data collection phase
+2025-03-27 13:02:58,510 - enhanced_binary_bot - INFO - Finished market data collection phase (120 seconds)
+2025-03-27 13:02:58,510 - market_analyzer - WARNING - No market data available for ranking
+2025-03-27 13:02:58,511 - market_analyzer - WARNING - No market data available for ranking
+2025-03-27 13:02:58,511 - enhanced_binary_bot - INFO - Selected market: R_100
+2025-03-27 13:02:58,511 - enhanced_binary_bot - INFO - Starting trading on R_100
+2025-03-27 13:02:58,511 - enhanced_binary_bot - INFO - Contract settings: duration=1 t
+2025-03-27 13:02:58,608 - enhanced_binary_bot - ERROR - API Error: You are already subscribed to R_100 (Code: AlreadySubscribed)
+2025-03-27 13:02:58,608 - enhanced_binary_bot - ERROR - Request that caused error: {"req_id": 12, "subscribe": 1, "ticks": "R_100"}
+2025-03-27 13:02:58,624 - enhanced_binary_bot - WARNING - Incomplete history data received
+2025-03-27 13:03:00,954 - market_analyzer - WARNING - No market data available for ranking
+2025-03-27 13:03:13,512 - market_analyzer - WARNING - No market data available for ranking
+2025-03-27 13:03:13,513 - enhanced_binary_bot - INFO - Current market R_100 not performing well. Switching markets.
+2025-03-27 13:03:13,513 - market_analyzer - WARNING - No market data available for ranking
+2025-03-27 13:03:13,513 - enhanced_binary_bot - INFO - Selected market: R_25
+2025-03-27 13:03:13,615 - enhanced_binary_bot - ERROR - API Error: You are already subscribed to R_25 (Code: AlreadySubscribed)
+2025-03-27 13:03:13,615 - enhanced_binary_bot - ERROR - Request that caused error: {"req_id": 14, "subscribe": 1, "ticks": "R_25"}
+2025-03-27 13:03:13,616 - enhanced_binary_bot - ERROR - API Error: You are already subscribed to R_25 (Code: AlreadySubscribed)
+2025-03-27 13:03:13,616 - enhanced_binary_bot - ERROR - Request that caused error: {"req_id": 16, "subscribe": 1, "ticks": "R_25"}
+2025-03-27 13:03:13,627 - enhanced_binary_bot - WARNING - Incomplete history data received
+2025-03-27 13:03:13,630 - enhanced_binary_bot - WARNING - Incomplete history data received
+2025-03-27 13:03:38,520 - market_analyzer - WARNING - No market data available for ranking
+2025-03-27 13:03:43,522 - market_analyzer - WARNING - No market data available for ranking
+2025-03-27 13:03:58,285 - enhanced_binary_bot - INFO - Skipping trade - market has poor win rate: 0.50
+2025-03-27 13:03:58,286 - market_analyzer - WARNING - No market data available for ranking
+2025-03-27 13:03:58,523 - enhanced_binary_bot - INFO - Skipping trade - market has poor win rate: 0.50
+2025-03-27 13:04:00,286 - enhanced_binary_bot - INFO - Skipping trade - market has poor win rate: 0.50
+2025-03-27 13:04:00,960 - market_analyzer - WARNING - No market data available for ranking
+2025-03-27 13:04:02,285 - enhanced_binary_bot - INFO - Skipping trade - market has poor win rate: 0.50
+2025-03-27 13:04:03,286 - enhanced_binary_bot - INFO - Skipping trade - market has poor win rate: 0.50
+2025-03-27 13:04:03,525 - enhanced_binary_bot - INFO - Skipping trade - market has poor win rate: 0.50
+2025-03-27 13:04:04,297 - enhanced_binary_bot - INFO - Skipping trade - market has poor win rate: 0.50
+2025-03-27 13:04:05,287 - enhanced_binary_bot - INFO - Skipping trade - market has poor win rate: 0.50
+2025-03-27 13:04:05,287 - market_analyzer - WARNING - No market data available for ranking
+2025-03-27 13:04:06,279 - enhanced_binary_bot - INFO - Skipping trade - market has poor win rate: 0.50
+2025-03-27 13:04:07,287 - enhanced_binary_bot - INFO - Skipping trade - market has poor win rate: 0.50
+2025-03-27 13:04:08,283 - enhanced_binary_bot - INFO - Strong signal overriding negative market history
+2025-03-27 13:04:08,284 - enhanced_binary_bot - INFO - High-probability trading opportunity detected: PUT with confidence 0.85 (base: 0.85, adjustment: +0.00)
+2025-03-27 13:04:08,284 - enhanced_binary_bot - INFO - Signal reason: Mean reversion: Price near upper band (2359.3190/2359.5276) with overbought RSI (99.39); Bearish divergence: Price up but RSI down
+2025-03-27 13:04:08,284 - risk_manager - INFO - High probability trade bonus: 1.20x
+2025-03-27 13:04:08,284 - risk_manager - INFO - Calculated stake: $20.0 using kelly strategy (win probability: 0.85)
+2025-03-27 13:04:08,284 - enhanced_binary_bot - INFO - Placing PUT trade on R_25
+2025-03-27 13:04:08,284 - enhanced_binary_bot - INFO - Stake: $20.0
+2025-03-27 13:04:08,284 - enhanced_binary_bot - INFO - Contract duration: 1 t
+2025-03-27 13:04:08,465 - enhanced_binary_bot - INFO - Contract placed successfully. ID: 276808838148
+2025-03-27 13:04:14,467 - enhanced_binary_bot - INFO - Contract won! Profit: $19.06
+2025-03-27 13:04:14,467 - risk_manager - INFO - Trade won: profit=$19.06, daily profit=$19.06, win rate=1.00
+2025-03-27 13:04:14,468 - enhanced_binary_bot - INFO - Session summary: Win rate: 100.0%, Profit: $19.06
+2025-03-27 13:04:14,468 - market_analyzer - WARNING - No market data available for ranking
+2025-03-27 13:04:14,468 - enhanced_binary_bot - INFO - Selected market: R_50
+2025-03-27 13:04:14,576 - enhanced_binary_bot - ERROR - API Error: You are already subscribed to R_50 (Code: AlreadySubscribed)
+2025-03-27 13:04:14,576 - enhanced_binary_bot - ERROR - Request that caused error: {"req_id": 22, "subscribe": 1, "ticks": "R_50"}
+2025-03-27 13:04:14,577 - enhanced_binary_bot - ERROR - API Error: You are already subscribed to R_50 (Code: AlreadySubscribed)
+2025-03-27 13:04:14,577 - enhanced_binary_bot - ERROR - Request that caused error: {"req_id": 20, "subscribe": 1, "ticks": "R_50"}
+2025-03-27 13:04:14,597 - enhanced_binary_bot - WARNING - Incomplete history data received
+2025-03-27 13:04:14,598 - enhanced_binary_bot - WARNING - Incomplete history data received
+2025-03-27 13:04:16,361 - enhanced_binary_bot - INFO - Trading during favorable hour (win rate: 1.00)
+2025-03-27 13:04:16,361 - enhanced_binary_bot - INFO - Strong signal overriding negative market history
+2025-03-27 13:04:16,361 - enhanced_binary_bot - INFO - High-probability trading opportunity detected: CALL with confidence 1.00 (base: 0.95, adjustment: +0.05)
+2025-03-27 13:04:16,361 - enhanced_binary_bot - INFO - Signal reason: Mean reversion: Price near lower band (195.9209/1308.0960) with oversold RSI (4.04); Bullish divergence: Price down but RSI up; Uptrend confirmation
+2025-03-27 13:04:16,361 - risk_manager - INFO - High probability trade bonus: 1.20x
+2025-03-27 13:04:16,361 - risk_manager - INFO - Calculated stake: $20.0 using kelly strategy (win probability: 0.95)
+2025-03-27 13:04:16,361 - enhanced_binary_bot - INFO - Placing CALL trade on R_50
+2025-03-27 13:04:16,362 - enhanced_binary_bot - INFO - Stake: $20.0
+2025-03-27 13:04:16,362 - enhanced_binary_bot - INFO - Contract duration: 1 t
+2025-03-27 13:04:16,537 - enhanced_binary_bot - INFO - Contract placed successfully. ID: 276808850088
+2025-03-27 13:04:22,426 - enhanced_binary_bot - INFO - Contract lost. Loss: $-20
+2025-03-27 13:04:22,426 - risk_manager - INFO - Trade lost: profit=$-20.00, daily profit=$-0.94, win rate=0.50
+2025-03-27 13:04:22,426 - enhanced_binary_bot - INFO - Session summary: Win rate: 50.0%, Profit: $-0.94
+2025-03-27 13:04:22,426 - market_analyzer - WARNING - No market data available for ranking
+2025-03-27 13:04:22,427 - enhanced_binary_bot - INFO - Selected market: 1HZ75V
+2025-03-27 13:04:22,558 - enhanced_binary_bot - ERROR - API Error: You are already subscribed to 1HZ75V (Code: AlreadySubscribed)
+2025-03-27 13:04:22,558 - enhanced_binary_bot - ERROR - Request that caused error: {"req_id": 26, "subscribe": 1, "ticks": "1HZ75V"}
+2025-03-27 13:04:22,559 - enhanced_binary_bot - ERROR - API Error: You are already subscribed to 1HZ75V (Code: AlreadySubscribed)
+2025-03-27 13:04:22,559 - enhanced_binary_bot - ERROR - Request that caused error: {"req_id": 28, "subscribe": 1, "ticks": "1HZ75V"}
+2025-03-27 13:04:22,560 - enhanced_binary_bot - WARNING - Incomplete history data received
+2025-03-27 13:04:22,565 - enhanced_binary_bot - WARNING - Incomplete history data received
+2025-03-27 13:04:23,228 - enhanced_binary_bot - INFO - Strong signal overriding negative market history
+2025-03-27 13:04:23,228 - enhanced_binary_bot - INFO - High-probability trading opportunity detected: PUT with confidence 0.85 (base: 0.85, adjustment: +0.00)
+2025-03-27 13:04:23,228 - enhanced_binary_bot - INFO - Signal reason: Mean reversion: Price near upper band (7217.3600/5053.9347) with overbought RSI (81.50); Bearish divergence: Price up but RSI down
+2025-03-27 13:04:23,228 - risk_manager - INFO - High probability trade bonus: 1.20x
+2025-03-27 13:04:23,228 - risk_manager - INFO - Calculated stake: $20.0 using kelly strategy (win probability: 0.85)
+2025-03-27 13:04:23,228 - enhanced_binary_bot - INFO - Placing PUT trade on 1HZ75V
+2025-03-27 13:04:23,229 - enhanced_binary_bot - INFO - Stake: $20.0
+2025-03-27 13:04:23,229 - enhanced_binary_bot - INFO - Contract duration: 1 t
+2025-03-27 13:04:23,414 - enhanced_binary_bot - INFO - Contract placed successfully. ID: 276808861288
+2025-03-27 13:04:26,592 - enhanced_binary_bot - INFO - Contract won! Profit: $19.06
+2025-03-27 13:04:26,592 - risk_manager - INFO - Trade won: profit=$19.06, daily profit=$18.12, win rate=0.67
+2025-03-27 13:04:26,592 - enhanced_binary_bot - INFO - Session summary: Win rate: 66.67%, Profit: $18.12
+2025-03-27 13:04:26,592 - market_analyzer - WARNING - No market data available for ranking
+2025-03-27 13:04:26,592 - enhanced_binary_bot - INFO - Selected market: STEP_INDEX
+2025-03-27 13:04:26,695 - enhanced_binary_bot - ERROR - API Error: Symbol STEP_INDEX invalid. (Code: InvalidSymbol)
+2025-03-27 13:04:26,695 - enhanced_binary_bot - ERROR - Request that caused error: {"count": 100, "end": "latest", "req_id": 33, "style": "ticks", "ticks_history": "STEP_INDEX"}
+2025-03-27 13:04:26,696 - enhanced_binary_bot - ERROR - API Error: Symbol STEP_INDEX invalid. (Code: InvalidSymbol)
+2025-03-27 13:04:26,696 - enhanced_binary_bot - ERROR - Request that caused error: {"req_id": 34, "subscribe": 1, "ticks": "STEP_INDEX"}
+2025-03-27 13:04:26,696 - enhanced_binary_bot - ERROR - API Error: Symbol STEP_INDEX invalid. (Code: InvalidSymbol)
+2025-03-27 13:04:26,696 - enhanced_binary_bot - ERROR - Request that caused error: {"count": 100, "end": "latest", "req_id": 35, "style": "ticks", "ticks_history": "STEP_INDEX"}
+2025-03-27 13:04:26,696 - enhanced_binary_bot - ERROR - API Error: Symbol STEP_INDEX invalid. (Code: InvalidSymbol)
+2025-03-27 13:04:26,696 - enhanced_binary_bot - ERROR - Request that caused error: {"req_id": 32, "subscribe": 1, "ticks": "STEP_INDEX"}
+2025-03-27 13:04:27,427 - enhanced_binary_bot - INFO - Trading during favorable hour (win rate: 0.67)
+2025-03-27 13:04:27,428 - market_analyzer - WARNING - No market data available for ranking
+2025-03-27 13:04:27,428 - enhanced_binary_bot - INFO - Current market STEP_INDEX not performing well. Switching markets.
+2025-03-27 13:04:27,428 - market_analyzer - WARNING - No market data available for ranking
+2025-03-27 13:04:27,523 - enhanced_binary_bot - ERROR - API Error: Symbol STEP_INDEX invalid. (Code: InvalidSymbol)
+2025-03-27 13:04:27,524 - enhanced_binary_bot - ERROR - Request that caused error: {"req_id": 36, "subscribe": 1, "ticks": "STEP_INDEX"}
+2025-03-27 13:04:27,533 - enhanced_binary_bot - ERROR - API Error: Symbol STEP_INDEX invalid. (Code: InvalidSymbol)
+2025-03-27 13:04:27,533 - enhanced_binary_bot - ERROR - Request that caused error: {"count": 100, "end": "latest", "req_id": 37, "style": "ticks", "ticks_history": "STEP_INDEX"}
+2025-03-27 13:04:31,594 - enhanced_binary_bot - INFO - Trading during favorable hour (win rate: 0.67)
+2025-03-27 13:04:32,429 - enhanced_binary_bot - INFO - Trading during favorable hour (win rate: 0.67)
+2025-03-27 13:04:36,596 - enhanced_binary_bot - INFO - Trading during favorable hour (win rate: 0.67)
+2025-03-27 13:04:37,429 - enhanced_binary_bot - INFO - Trading during favorable hour (win rate: 0.67)

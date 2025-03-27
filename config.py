@@ -14,13 +14,6 @@ MARKETS = {
     "volatility_indices": [
         "R_10", "R_25", "R_50", "R_75", "R_100",
         "1HZ10V", "1HZ25V", "1HZ50V", "1HZ75V", "1HZ100V"
-    ],
-    "crash_boom": [
-        "CRASH_1000", "CRASH_500", "CRASH_250", 
-        "BOOM_1000", "BOOM_500", "BOOM_250"
-    ],
-    "step_indices": [
-        "STEP_INDEX"
     ]
 }
 
