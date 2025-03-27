@@ -1,0 +1,292 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - Enhanced Binary Options Bot{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Trading Bot Control Panel</h4>
+            </div>
+            <div class="card-body">
+                <div class="row mb-4" id="startSection">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label for="apiToken">Deriv API Token:</label>
+                            <input type="password" class="form-control" id="apiToken" placeholder="Enter your Deriv API token">
+                            <small class="form-text text-muted">
+                                You can get your API token from <a href="https://app.deriv.com/account/api-token" target="_blank">Deriv API Token Page</a>. 
+                                Make sure to create a token with the "Admin" scope for full access.
+                            </small>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-end">
+                        <button id="startBotBtn" class="btn btn-primary me-2">Start Bot</button>
+                        <button id="stopBotBtn" class="btn btn-danger" disabled>Stop Bot</button>
+                    </div>
+                </div>
+                <div id="alertArea"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="card status-card h-100">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">Bot Status</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6 mb-3">
+                        <div class="d-flex flex-column">
+                            <span class="text-muted mb-1">Status</span>
+                            <span class="stat-value" id="botStatusValue">Stopped</span>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <div class="d-flex flex-column">
+                            <span class="text-muted mb-1">Current Market</span>
+                            <span class="stat-value" id="currentMarket">-</span>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <div class="d-flex flex-column">
+                            <span class="text-muted mb-1">Total Trades</span>
+                            <span class="stat-value" id="totalTrades">0</span>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <div class="d-flex flex-column">
+                            <span class="text-muted mb-1">Win Rate</span>
+                            <span class="stat-value" id="winRate">0%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-flex flex-column">
+                            <span class="text-muted mb-1">Current Profit</span>
+                            <span class="stat-value" id="currentProfit">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card status-card h-100">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0">Trading Statistics</h5>
+            </div>
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-6 mb-3">
+                        <div class="card bg-success bg-opacity-10 h-100">
+                            <div class="card-body">
+                                <h6 class="text-success">Winning Trades</h6>
+                                <h3 id="winCount">0</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <div class="card bg-danger bg-opacity-10 h-100">
+                            <div class="card-body">
+                                <h6 class="text-danger">Losing Trades</h6>
+                                <h3 id="lossCount">0</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="progress mt-3" style="height: 25px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 50%" id="winRateProgress" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header bg-secondary text-white">
+                <h5 class="mb-0">Bot Logs</h5>
+            </div>
+            <div class="card-body">
+                <div class="log-container p-3" id="logContainer">
+                    <div class="text-muted text-center">Waiting for bot logs...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    $(document).ready(function() {
+        let isRunning = false;
+        let updateInterval;
+
+        // Start bot
+        $('#startBotBtn').click(function() {
+            const apiToken = $('#apiToken').val();
+            
+            $.ajax({
+                url: '/start_bot',
+                type: 'POST',
+                data: { api_token: apiToken },
+                success: function(response) {
+                    if (response.success) {
+                        isRunning = true;
+                        updateBotUI(true);
+                        showAlert('success', 'Bot started successfully');
+                        
+                        // Start status updates
+                        startStatusUpdates();
+                    } else {
+                        showAlert('danger', response.message);
+                    }
+                },
+                error: function() {
+                    showAlert('danger', 'Error starting the bot');
+                }
+            });
+        });
+
+        // Stop bot
+        $('#stopBotBtn').click(function() {
+            $.ajax({
+                url: '/stop_bot',
+                type: 'POST',
+                success: function(response) {
+                    if (response.success) {
+                        isRunning = false;
+                        updateBotUI(false);
+                        showAlert('warning', 'Bot stopped');
+                        
+                        // Stop status updates
+                        clearInterval(updateInterval);
+                    } else {
+                        showAlert('danger', response.message);
+                    }
+                },
+                error: function() {
+                    showAlert('danger', 'Error stopping the bot');
+                }
+            });
+        });
+
+        function updateBotUI(running) {
+            if (running) {
+                $('#startBotBtn').prop('disabled', true);
+                $('#stopBotBtn').prop('disabled', false);
+                $('#botStatusValue').text('Running').addClass('text-success').removeClass('text-danger');
+            } else {
+                $('#startBotBtn').prop('disabled', false);
+                $('#stopBotBtn').prop('disabled', true);
+                $('#botStatusValue').text('Stopped').addClass('text-danger').removeClass('text-success');
+            }
+        }
+
+        function showAlert(type, message) {
+            $('#alertArea').html(
+                `<div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>`
+            );
+        }
+
+        function startStatusUpdates() {
+            // Initial update
+            updateBotStatus();
+            
+            // Set interval for updates
+            updateInterval = setInterval(updateBotStatus, 2000);
+        }
+
+        function updateBotStatus() {
+            $.ajax({
+                url: '/bot_status',
+                type: 'GET',
+                success: function(data) {
+                    // Update statistics
+                    $('#totalTrades').text(data.trades_executed);
+                    $('#winCount').text(data.win_count);
+                    $('#lossCount').text(data.loss_count);
+                    
+                    // Calculate win rate
+                    let winRate = 0;
+                    if (data.trades_executed > 0) {
+                        winRate = Math.round((data.win_count / data.trades_executed) * 100);
+                    }
+                    $('#winRate').text(winRate + '%');
+                    $('#winRateProgress').css('width', winRate + '%').text(winRate + '%');
+                    
+                    // Update profit with formatting
+                    const profit = parseFloat(data.current_profit);
+                    $('#currentProfit')
+                        .text('$' + Math.abs(profit).toFixed(2))
+                        .removeClass('profit-positive profit-negative')
+                        .addClass(profit >= 0 ? 'profit-positive' : 'profit-negative');
+                    
+                    if (profit >= 0) {
+                        $('#currentProfit').prepend('+');
+                    } else if (profit < 0) {
+                        $('#currentProfit').prepend('-');
+                    }
+                    
+                    // Update current market
+                    if (data.current_market) {
+                        $('#currentMarket').text(data.current_market);
+                    }
+                    
+                    // Update logs
+                    updateLogs(data.messages);
+                    
+                    // Check if the bot is still running
+                    if (!data.running && isRunning) {
+                        isRunning = false;
+                        updateBotUI(false);
+                        showAlert('warning', 'Bot stopped unexpectedly');
+                        clearInterval(updateInterval);
+                    }
+                },
+                error: function() {
+                    console.error('Error fetching bot status');
+                }
+            });
+        }
+
+        function updateLogs(messages) {
+            if (!messages || messages.length === 0) {
+                return;
+            }
+            
+            const $logContainer = $('#logContainer');
+            $logContainer.empty();
+            
+            messages.forEach(function(log) {
+                const logClass = 'log-' + (log.level || 'info');
+                const $logEntry = $(`
+                    <div class="log-entry ${logClass}">
+                        <span class="log-time">[${log.timestamp}]</span>
+                        <span class="log-msg">${log.message}</span>
+                    </div>
+                `);
+                $logContainer.append($logEntry);
+            });
+            
+            // Scroll to bottom
+            $logContainer.scrollTop($logContainer[0].scrollHeight);
+        }
+    });
+</script>
+{% endblock %}

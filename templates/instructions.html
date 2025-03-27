@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+
+{% block title %}Instructions - Enhanced Binary Options Bot{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Bot Usage Instructions</h4>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-warning">
+                    <strong>Important:</strong> This bot is designed for educational purposes. Always use with caution and never risk more than you can afford to lose.
+                </div>
+                
+                <h5 class="mt-4">Getting Started</h5>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <ol class="mb-0">
+                            <li class="mb-2">
+                                <strong>Create a Deriv Account:</strong> 
+                                If you don't already have one, create an account on <a href="https://deriv.com" target="_blank">Deriv</a>.
+                            </li>
+                            <li class="mb-2">
+                                <strong>Generate an API Token:</strong> 
+                                Log in to your Deriv account, go to <a href="https://app.deriv.com/account/api-token" target="_blank">API Token</a>, and create a token with the "Admin" scope.
+                            </li>
+                            <li class="mb-2">
+                                <strong>Start the Bot:</strong> 
+                                Enter your API token on the dashboard and click "Start Bot" to begin trading.
+                            </li>
+                            <li class="mb-2">
+                                <strong>Monitor Performance:</strong> 
+                                Watch the bot's performance in real-time on the dashboard.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <h5 class="mt-4">Key Features</h5>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header bg-info text-white">
+                                <h5 class="mb-0">Improved Win Rate</h5>
+                            </div>
+                            <div class="card-body">
+                                <p>The bot uses enhanced technical analysis and pattern recognition to identify high-probability trading opportunities.</p>
+                                <ul>
+                                    <li>Multi-indicator confirmation</li>
+                                    <li>Pattern detection and divergence analysis</li>
+                                    <li>Market-specific optimizations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0">Intelligent Market Selection</h5>
+                            </div>
+                            <div class="card-body">
+                                <p>The bot analyzes multiple markets to select the most favorable conditions for trading.</p>
+                                <ul>
+                                    <li>Market volatility ranking</li>
+                                    <li>Historical win-rate analysis</li>
+                                    <li>Time-based performance patterns</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header bg-warning text-dark">
+                                <h5 class="mb-0">Advanced Risk Management</h5>
+                            </div>
+                            <div class="card-body">
+                                <p>The bot uses sophisticated risk management techniques to optimize returns and protect capital.</p>
+                                <ul>
+                                    <li>Enhanced Kelly Criterion staking</li>
+                                    <li>Dynamic position sizing</li>
+                                    <li>Loss limit and profit target implementation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h5 class="mt-4">Customization Options</h5>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p>The bot can be customized by editing the <code>config.py</code> file. Key settings include:</p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Setting</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>base_stake</code></td>
+                                    <td>The default stake amount for trades</td>
+                                </tr>
+                                <tr>
+                                    <td><code>max_stake</code></td>
+                                    <td>Maximum allowed stake for any trade</td>
+                                </tr>
+                                <tr>
+                                    <td><code>kelly_fraction</code></td>
+                                    <td>Risk management parameter (0-1) - lower is more conservative</td>
+                                </tr>
+                                <tr>
+                                    <td><code>max_daily_loss</code></td>
+                                    <td>Maximum allowed loss before the bot stops trading</td>
+                                </tr>
+                                <tr>
+                                    <td><code>profit_target</code></td>
+                                    <td>Target profit amount for the session</td>
+                                </tr>
+                                <tr>
+                                    <td><code>markets</code></td>
+                                    <td>List of markets to trade on</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <h5 class="mt-4">FAQ</h5>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Is the bot profitable?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The bot uses advanced strategies to identify high-probability trading opportunities, but trading binary options always involves risk. Results will vary based on market conditions and the bot's settings. The bot aims to shift the odds more in your favor compared to standard binary options trading, but there are no guarantees of profit.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                What markets does the bot trade on?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The bot primarily trades on synthetic indices offered by Deriv, including volatility indices, crash/boom indices, and step indices. These markets are available 24/7 and have predictable volatility characteristics that the bot can analyze effectively.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                How does the bot manage risk?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The bot uses several risk management techniques:
+                                <ul>
+                                    <li>Enhanced Kelly Criterion for optimal stake sizing based on win probability</li>
+                                    <li>Daily loss limits to prevent excessive losses</li>
+                                    <li>Profit targets to secure gains</li>
+                                    <li>Modified martingale approach with damping factors for recovery after losses</li>
+                                    <li>Variable stake adjustments based on market conditions and historical performance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                What technical indicators does the bot use?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The bot uses a combination of indicators:
+                                <ul>
+                                    <li>RSI (Relative Strength Index)</li>
+                                    <li>MACD (Moving Average Convergence Divergence)</li>
+                                    <li>Bollinger Bands</li>
+                                    <li>Price action pattern recognition</li>
+                                    <li>Trend analysis and strength measurement</li>
+                                    <li>Volatility analysis</li>
+                                    <li>Price/indicator divergence detection</li>
+                                </ul>
+                                These indicators are used together with confirmation logic to generate higher-probability signals.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

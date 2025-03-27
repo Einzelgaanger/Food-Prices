@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block title %}Configuration - Enhanced Binary Options Bot{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Bot Configuration</h4>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-info">
+                    <p>This page shows the current configuration of the trading bot. To modify the configuration, edit the <code>config.py</code> file.</p>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-header bg-secondary">
+                                <h5 class="mb-0">Risk Management Settings</h5>
+                            </div>
+                            <div class="card-body">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <th>Base Stake</th>
+                                            <td>${{ risk_config.base_stake }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Maximum Stake</th>
+                                            <td>${{ risk_config.max_stake }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Kelly Fraction</th>
+                                            <td>{{ risk_config.kelly_fraction }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Daily Loss Limit</th>
+                                            <td>${{ risk_config.max_daily_loss }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Profit Target</th>
+                                            <td>${{ risk_config.profit_target }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-secondary">
+                                <h5 class="mb-0">Available Markets</h5>
+                            </div>
+                            <div class="card-body">
+                                {% for category, market_list in markets.items() %}
+                                <div class="mb-4">
+                                    <h6>{{ category|replace('_', ' ')|title }}</h6>
+                                    <ul class="list-group">
+                                        {% for market in market_list %}
+                                        <li class="list-group-item">{{ market }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header bg-secondary">
+                                <h5 class="mb-0">Enhanced Trading Features</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Technical Analysis</h5>
+                                                <p class="card-text">Uses advanced technical indicators like RSI, MACD, Bollinger Bands, and pattern recognition to generate high-probability trading signals.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Risk Management</h5>
+                                                <p class="card-text">Implements dynamic position sizing based on win probability, market conditions, and historical performance to optimize returns.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Market Analysis</h5>
+                                                <p class="card-text">Analyzes multiple markets to select the best trading opportunities based on volatility, win rate, and time-based patterns.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
