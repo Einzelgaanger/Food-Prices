@@ -2,7 +2,13 @@
 """
 Enhanced Binary Options Trading Bot with improved win-rate logic and risk management
 """
-import websocket
+# Import websocket from the correct module
+try:
+    from websocket._app import WebSocketApp
+except ImportError:
+    import websocket
+    WebSocketApp = websocket.WebSocketApp
+
 import json
 import threading
 import time
@@ -11,6 +17,10 @@ import logging
 import sys
 import os
 from datetime import datetime
+
+# Set API tokens directly in code for workflow execution
+os.environ['DERIV_API_TOKEN'] = '8fRRApGnNy0TY6T'
+os.environ['DERIV_APP_ID'] = '1089'
 
 # Import custom modules
 from technical_indicators import TechnicalIndicators
@@ -99,7 +109,7 @@ class EnhancedBinaryOptionsBot:
     def connect(self):
         """Establish WebSocket connection"""
         self.logger.info("Connecting to Deriv API...")
-        self.ws = websocket.WebSocketApp(
+        self.ws = WebSocketApp(
             self.websocket_url,
             on_open=self.on_open,
             on_message=self.on_message,

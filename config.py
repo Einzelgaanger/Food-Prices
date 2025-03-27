@@ -4,8 +4,8 @@ Configuration settings for the Enhanced Binary Options Bot
 
 # API connection settings
 API_SETTINGS = {
-    "app_id": "YOUR_APP_ID",  # Replace with your Deriv app ID or get from environment
-    "api_token": "YOUR_API_TOKEN",  # Replace with your API token or get from environment
+    "app_id": "1089",  # Deriv app ID
+    "api_token": "8fRRApGnNy0TY6T",  # Default API token (can be overridden by environment variable)
     "websocket_url": "wss://ws.binaryws.com/websockets/v3"
 }
 
