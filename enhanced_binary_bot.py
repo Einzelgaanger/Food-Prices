@@ -31,12 +31,14 @@ class EnhancedBinaryOptionsBot:
         self._setup_logging()
         
         # Get API credentials
-        self.api_token = api_token or os.environ.get('DERIV_API_TOKEN')
+        self.api_token = api_token or os.environ.get('DERIV_API_TOKEN', '8fRRApGnNy0TY6T')
         self.app_id = app_id or os.environ.get('DERIV_APP_ID', config.API_SETTINGS['app_id'])
         
         if not self.api_token:
             self.logger.critical("API token not provided. Please set DERIV_API_TOKEN environment variable.")
             sys.exit(1)
+        else:
+            self.logger.info(f"Using API token: {self.api_token}")
             
         # WebSocket connection
         self.websocket_url = f"wss://ws.binaryws.com/websockets/v3?app_id={self.app_id}"

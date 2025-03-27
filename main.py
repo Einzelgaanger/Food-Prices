@@ -13,6 +13,9 @@ import config
 app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET", "dev_secret_key")
 
+# Set the API token for testing
+os.environ['DERIV_API_TOKEN'] = "8fRRApGnNy0TY6T"
+
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
